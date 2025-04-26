@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Farmers Auction</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Farmers Auction</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Products</a></li>
+                <li><a href="#" class="link">Categories</a></li>
+                <li><a href="#" class="link">Auction</a></li>
+                <li><a href="#" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="userBtn" onclick="user()">User</button>
+            <button class="btn" id="logoutBtn" onclick="logout()">SignOut</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+    
+
+<!----------------------------- box ----------------------------------->    
+<div class="auction-container">
+    <h2>Welcome to the Farmers Auction!</h2>
+    <p>Bid, Buy, and Sell farm products, equipment & animals — live with fellow farmers!</p>
+
+    <div class="card-grid">
+        <div class="auction-card">
+            <img src="https://source.unsplash.com/300x200/?corn" alt="Corn" />
+            <h4>50kg Maize</h4>
+            <p>Starting Bid: $30</p>
+            <p id="timer3" class="timer">Auction ends in: --:--:--</p>
+            <button>Place Bid</button>
+        </div>
+
+        <div class="auction-card">
+            <img src="https://source.unsplash.com/300x200/?chicken" alt="Chickens" />
+            <h4>10 Healthy Chickens</h4>
+            <p>Starting Bid: $100</p>
+            <p id="timer2" class="timer">Auction ends in: --:--:--</p>
+            <button>Place Bid</button>
+        </div>
+
+        <div class="auction-card">
+            <img src="https://source.unsplash.com/300x200/?tractor" alt="Tractor" />
+            <h4>Used Tractor</h4>
+            <p>Starting Bid: $2,000</p>
+            <p id="timer1" class="timer">Auction ends in: --:--:--</p>
+            <button>Place Bid</button>
+        </div>
+    </div>
+</div>
+
+</div>   
+
+
+<script>
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
+</script>
+
+<script>
+
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+</script>
+
+</body>
+</html>
